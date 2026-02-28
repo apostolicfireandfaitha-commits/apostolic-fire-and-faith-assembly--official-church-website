@@ -33,70 +33,53 @@
 </head>
 <body>
 
-  <header class="fma-header">
-  <!-- Background Video - Performance Optimized -->
-  <video autoplay muted playsinline class="header-video" preload="metadata">
-    <source src="Images/fma-background.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <header class="fma-header hero">
+    <!-- Background Video - kept for richness; gradient overlay handled in CSS -->
+    <video autoplay muted playsinline class="header-video" preload="metadata" aria-hidden="true">
+      <source src="Images/fma-background.mp4" type="video/mp4">
+    </video>
 
-  <!-- Image Slideshow - Performance Optimized with Lazy Loading -->
-  <div class="image-slider">
-    <img src="Images/IMG_0209.png" class="slide active" alt="ASABA service">
-    <img src="Images/IMG_0203.png" class="slide" loading="lazy" alt="Church Community Gathering">
-    <img src="Images/IMG_0161.png" class="slide" loading="lazy" alt="Worship Service">
-    <img src="Images/IMG_0161 (1).png" class="slide" loading="lazy" alt="Church Fellowship">
-    <img src="Images/IMG_0140.png" class="slide" loading="lazy" alt="Prayer Meeting">
-    <img src="Images/IMG_0112.png" class="slide" loading="lazy" alt="Church Event">
-    <img src="Images/IMG_0062.png" class="slide" loading="lazy" alt="Community Outreach">
-    <img src="Images/IMG_0054.png" class="slide" loading="lazy" alt="Church Service">
-    <img src="Images/IMG_0039.jpg" class="slide" loading="lazy" alt="Worship Experience">
-    <img src="Images/AFFA-LOGO.png" class="slide" loading="lazy" alt="Church Community">
-  </div>
+    <!-- Top Navigation Bar (compact) -->
+    <div class="header-top">
+      <a href="index.html" class="logo-link">
+        <img src="Images/AFFA-LOGO.png" alt="Apostolic Fire and Faith Assembly Logo" class="logo" />
+        <div class="church-name">Apostolic Fire and Faith Assembly</div>
+      </a>
 
-  <!-- Top Navigation Bar -->
-  <div class="header-top">
-    <a href="index.html" class="logo-link">
-      <img src="Images/AFFA-LOGO.png" alt="Apostolic Fire and Faith Assembly Logo" class="logo" />
-      <div class="church-name">Apostolic Fire and Faith Assembly</div>
-    </a>
-    <!-- Hamburger Icon (visible on mobile) -->
-<div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav class="nav-links" id="mainNav" aria-label="Primary Navigation">
+        <a href="index.html">Home</a>
+        <a href="livestream.html" target="_blank">Livestream</a>
+        <a href="give.html">Give</a>
+        <a href="expression.html">Expressions</a>
+        <a href="about-us.html">About Us</a>
+      </nav>
 
-<!-- Navigation Menu -->
-<nav class="nav-links" id="mobileMenu"> 
-  <div class="close-btn" onclick="toggleMenu()">×</div>
-  <a href="index.html">Home</a>
-  <a href="livestream.html"target="_blank" >Livestream</a>
-  <a href="#">Give</a>
-  <a href="#">Expressions</a>
-  <a href="#">Media</a>
-  <a href="#">About Us</a>
-</nav>
+      <button class="hamburger" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMenu()">☰</button>
+    </div>
 
-  </div>
+    <!-- Hero Inner: headline, supporting copy, CTAs -->
+    <div class="hero-inner">
+      <div class="header-content">
+        <h1 class="hero-title">A Place of Power. A Place of Restoration.</h1>
+        <p class="hero-subtitle">Join us in Asaba for revival, restoration and landslide victory — 2026: Your Goshen Year.</p>
 
-  <!-- Main Header Content -->
-  <div class="header-content">
-    <h1>APOSTOLIC FIRE AND FAITH ASSEMBLY</h1>
-   <h2>A Place of Power. A Place of Restoration. A Place of Victory.</h2>
+        <p class="hero-strap">Feeling overwhelmed? Seeking restoration? Come and receive.</p>
 
-    <p><strong>Feeling overwhelmed? Under spiritual attack? Seeking restoration?</strong></p>
+        <div class="action-boxes hero-ctas">
+          <a href="get-connected.html" class="box blue">Plan Your Visit</a>
+          <a href="livestream.html" class="box action-color">Watch Live</a>
+          <a href="get-connected.html?tab=prayer" class="box white">Request Prayer</a>
+        </div>
+      </div>
 
-    <p><strong>This is your Goshen year</strong> – 2026: My Year of Total Restoration, Recovery & Landslide Victories.</p>
-
-   <p>Join us for a powerful move of God and experience supernatural change.</p>
-
-   <p><strong>Welcome to ASABA.</strong></p>
-
-  </div>
-
-  <div class="action-boxes">
-    <a href="#" target="_blank" class="box blue">Plan Your Visit</a>
-    <a href="#" target="_blank" class="box action-color">Watch Live</a>
-    <a href="#" target="_blank" class="box white">Request Prayer</a>
-  </div>
-</header>
+      <!-- Decorative wave at bottom to lead into content -->
+      <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" width="100%" height="100">
+          <path d="M0,30 C360,120 720,-20 1440,40 L1440,120 L0,120 Z" fill="rgba(255,255,255,0.95)" />
+        </svg>
+      </div>
+    </div>
+  </header>
 
  <section class="welcome-section">
   <div class="welcome-content">
@@ -122,41 +105,73 @@
 </section>
 
 <!-- Weekly Schedule Section -->
-<section class="schedule-section">
-  <h2 class="schedule-title">Worship With Us @<br></h2>
-  <div class="info-card subtitle-card">
-    <p class="schedule-subtitle">Days of Activities • Location: Obikachy Plaza, Off Summit Rd, DLA Junction, Asaba, Delta State</p>
+<section class="schedule-section" aria-labelledby="scheduleHeading">
+  <div class="schedule-header">
+    <h2 id="scheduleHeading" class="schedule-title">Worship With Us</h2>
+    <p class="schedule-subtitle">Obikachy Plaza • Off Summit Rd • DLA Junction, Asaba</p>
   </div>
-  <div class="schedule-grid">
-    <div class="card"> 
-      <h3>Sunday Service</h3>
-      <p>9:00AM - 11:45AM</p>
-    </div>
-    <div class="card">
-      <h3>Tuesday Bible Study</h3>
-      <p>5:00PM - 6:30PM</p>
-    </div>
-    <div class="card">
-      <h3>Wednesday Expectant Mothers</h3>
-      <p>10:00AM - 12:00NOON</p>
-      <p><em>(Women who are believing God for the fruit of the womb / Marital settlement)</em></p>
-    </div>
-    <div class="card">
-      <h3>Thursday Revival Service</h3>
-      <p>Breakthrough Encounter 5:00PM - 6:30PM</p>
-    </div>
-    <div class="card">
-      <h3>First Friday Vigil</h3>
-      <p>Possessing the New Month<br>12:00AM - 4:00AM</p>
-      <p><em>Monthly 4‑hour vigil with the Lord</em></p>
-    </div>
+
+  <div class="schedule-grid" role="list">
+    <article class="card" role="listitem" tabindex="0" data-day="Sunday">
+      <div class="card-top">
+        <div class="card-icon">☀️</div>
+        <h3 class="card-title">Sunday Service</h3>
+        <div class="card-time">9:00AM - 11:45AM</div>
+      </div>
+      <div class="card-body">
+        <p>Powerful morning worship and teaching. Children ministry and prayer after service.</p>
+      </div>
+    </article>
+
+    <article class="card" role="listitem" tabindex="0" data-day="Tuesday">
+      <div class="card-top">
+        <div class="card-icon">📖</div>
+        <h3 class="card-title">Tuesday Bible Study</h3>
+        <div class="card-time">5:00PM - 6:30PM</div>
+      </div>
+      <div class="card-body">
+        <p>Deep dive into Scripture with practical life application and small group discussion.</p>
+      </div>
+    </article>
+
+    <article class="card" role="listitem" tabindex="0" data-day="Wednesday">
+      <div class="card-top">
+        <div class="card-icon">🤰</div>
+        <h3 class="card-title">Wednesday — Expectant Mothers</h3>
+        <div class="card-time">10:00AM - 12:00NOON</div>
+      </div>
+      <div class="card-body">
+        <p>Prayers and ministry for women believing God for the fruit of the womb and marital settlement.</p>
+      </div>
+    </article>
+
+    <article class="card" role="listitem" tabindex="0" data-day="Thursday">
+      <div class="card-top">
+        <div class="card-icon">🔥</div>
+        <h3 class="card-title">Thursday Revival Service</h3>
+        <div class="card-time">5:00PM - 6:30PM</div>
+      </div>
+      <div class="card-body">
+        <p>Breakthrough encounters and prophetic ministry — come expectant for miracles.</p>
+      </div>
+    </article>
+
+    <article class="card" role="listitem" tabindex="0" data-day="Friday">
+      <div class="card-top">
+        <div class="card-icon">🌙</div>
+        <h3 class="card-title">First Friday Vigil</h3>
+        <div class="card-time">12:00AM - 4:00AM</div>
+      </div>
+      <div class="card-body">
+        <p>Monthly vigil — Possessing the New Month. Night of worship, prayer and testimonies.</p>
+      </div>
+    </article>
   </div>
-  <div class="info-card footer-card">
-    <div class="schedule-footer">
-      <p>Congratulations! As you come… you are the next to testify.</p>
-      <p>See you there — God bless you as you come.</p>
-      <p>Enquiries call: <strong>07064468236</strong> (Phone) / <strong>08067391469</strong> (WhatsApp)</p>
-    </div>
+
+  <div class="schedule-footer">
+    <p>Congratulations! As you come… you are the next to testify.</p>
+    <p>See you there — God bless you as you come.</p>
+    <p>Enquiries: <strong>07064468236</strong> / <strong>08067391469</strong> (WhatsApp)</p>
   </div>
 </section>
 
@@ -199,29 +214,32 @@
 </section>
 
 
-<section class="lead-pastor-section">
+<section class="lead-pastor-section" aria-labelledby="leadPastorHeading" role="region">
   <div class="pastor-bg">
-    <div class="pastor-content">
-     <section>
-      <h2>Meet Our Lead Pastor</h2>
-  <p>
-    Led by <strong>Pastor Victor Oluwawalehinmi</strong>, Apostolic Fire and Faith Assembly is driven by a prophetic mandate for revival and restoration. Pastor Victor is a voice of power, delivering revelation that ignites faith and produces miracles.
-  </p>
-  <div>
-    <div>
-      <h3>Pastor Victor Oluwawalehinmi</h3>
-      <p>
-        A prophetic leader with a mandate for fire and faith. His messages stir the spirit, ignite revival,
-        and call believers into their year of restoration and victory.
-      </p>
-    </div>
-  </div>
-  <p>
-    Together, they are supported by a dedicated team of pastors and ministers across the globe,
-    united in the mission to serve both God and humanity with passion and grace.
-  </p>
-</section>
-      <a href="#" target="_blank" class="learn-link">Learn More</a>
+    <div class="pastor-content container">
+      <div class="pastor-grid">
+        <div class="pastor-photo" aria-hidden="false">
+          <img src="Images/IMG_0054.png" alt="Pastor Victor Oluwawalehinmi" loading="lazy">
+        </div>
+
+        <div class="pastor-details">
+          <h2 id="leadPastorHeading">Meet Our Lead Pastor</h2>
+          <p class="lead">Led by <strong>Pastor Victor Oluwawalehinmi</strong>, Apostolic Fire and Faith Assembly is driven by a prophetic mandate for revival and restoration. Pastor Victor's teaching ignites faith and brings transformation.</p>
+
+          <p>Pastor Victor is a prophetic leader whose messages combine scriptural depth with practical application. He leads outreach, counselling, and discipleship with a heart for families and revival.</p>
+
+          <ul class="pastor-highlights" aria-hidden="false">
+            <li><strong>Prophetic Ministry:</strong> Anointed preaching that awakens destiny.</li>
+            <li><strong>Community Impact:</strong> Outreach, counselling, and family restoration programs.</li>
+            <li><strong>Global Vision:</strong> Partnerships for missions, training and church planting.</li>
+          </ul>
+
+          <div class="pastor-actions">
+            <a href="#" class="btn primary learn-link" role="button">Learn More</a>
+            <a href="#" class="btn outline" role="button">Plan a Visit</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -261,6 +279,60 @@
 </footer>
 
 <!-- Performance: Load JavaScript with defer -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // trigger subtle entrance animation for hero
+  document.body.classList.add('hero-loaded');
+
+  // mobile hamburger toggle
+  window.toggleMenu = function() {
+    var btn = document.querySelector('.hamburger');
+    var nav = document.getElementById('mainNav');
+    if (!btn || !nav) return;
+    
+    // toggle the 'show' class to display/hide menu
+    nav.classList.toggle('show');
+    
+    // update aria-expanded for accessibility
+    var expanded = nav.classList.contains('show');
+    btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    
+    // close menu when clicking on a link
+    var links = nav.querySelectorAll('a');
+    links.forEach(function(link) {
+      link.addEventListener('click', function() {
+        nav.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  };
+
+  // Schedule cards: expand/collapse and keyboard support
+  var scheduleCards = document.querySelectorAll('.schedule-section .card');
+  scheduleCards.forEach(function(card){
+    // ensure aria-expanded state
+    card.setAttribute('aria-expanded','false');
+
+    function toggleCard() {
+      var expanded = card.classList.toggle('expanded');
+      card.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    }
+
+    card.addEventListener('click', function(e){
+      // ignore clicks on inner links (if any)
+      if (e.target.tagName.toLowerCase() === 'a') return;
+      toggleCard();
+    });
+
+    card.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleCard();
+      }
+    });
+  });
+});
+</script>
 <script src="Scripts/fma.js" defer></script>
 </body>
 </html>

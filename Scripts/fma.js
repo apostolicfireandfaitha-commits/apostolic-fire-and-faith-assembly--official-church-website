@@ -159,7 +159,7 @@ class PerformanceOptimizer {
       const leadPastorSection = document.querySelector(".lead-pastor-section");
       if (leadPastorSection) {
         leadPastorSection.style.cssText += `
-          background-image: url('Images/IMG_0062.png');
+          background-image: url('Images/image2.jpg');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
