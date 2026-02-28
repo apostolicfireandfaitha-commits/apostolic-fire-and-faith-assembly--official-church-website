@@ -1,0 +1,1046 @@
+﻿<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Optimization -->
+  <meta name="description" content="Our Mission - Apostolic Fire and Faith Assembly. Building a culture of evangelism and mobilizing people to preach the Gospel.">
+  <meta name="keywords" content="Apostolic Fire and Faith Assembly, mission, evangelism, gospel, preaching, discipleship">
+  <meta property="og:title" content="Our Mission - Apostolic Fire and Faith Assembly">
+  <meta property="og:description" content="Helping people to Know God by building a culture of Evangelism from Season to Season.">
+  <meta property="og:image" content="Images/AFFA-LOGO.png">
+  
+  <title>Our Mission - Apostolic Fire and Faith Assembly</title>
+  <link rel="icon" href="Images/FMA-LOGO.png" type="image/png">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    /* Modern CSS Variables */
+    :root {
+--primary-color: #003399;
+      --accent-color: #800080;
+      --action-color: #cc0000;
+      --dark-blue: #002266;
+      --text-dark: #000000;
+      --text-light: #333333;
+      --text-muted: #555555;
+      --background-light: #ffffff;
+      --background-white: #ffffff;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+     --shadow-xl: 0 20px 25px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.04);
+      --border-radius: 8px;
+      --border-radius-lg: 12px;
+      --border-radius-xl: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-primary: 'Inter', sans-serif;
+      --font-display: 'Playfair Display', serif;
+    }
+
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--background-light);
+      overflow-x: hidden;
+    }
+
+    /* Navigation Bar - White Background */
+    .nav-bar {
+      background: var(--background-white);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      z-index: 100;
+    }
+
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid var(--primary-color);
+    }
+
+    .church-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-color);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-dark);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Hero Section with Animated Background */
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+      animation: float 20s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+      padding: 2rem 1rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 700;
+      margin-bottom: 2rem;
+      background: linear-gradient(45deg, white, var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    .mission-statement {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--secondary-color);
+      margin-bottom: 2rem;
+      padding: 2rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--border-radius-lg);
+      backdrop-filter: blur(10px);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      border-radius: var(--border-radius-lg);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .cta-btn.primary {
+      background: var(--secondary-color);
+      color: var(--text-dark);
+    }
+
+    .cta-btn.secondary {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border: 2px solid white;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    /* Main Content */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1rem;
+    }
+
+    /* Mission Features Section */
+    .features-section {
+      margin-bottom: 4rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .feature-card {
+      background: var(--background-white);
+      border-radius: var(--border-radius-xl);
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .feature-description {
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* Video Section */
+    .video-section {
+      background: var(--background-white);
+      border-radius: var(--border-radius-xl);
+      padding: 3rem 2rem;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--text-dark);
+      margin-bottom: 2rem;
+    }
+
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .video-card {
+      background: var(--background-light);
+      border-radius: var(--border-radius-lg);
+      padding: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .video-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .video-placeholder {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--primary-color), var(--dark-blue));
+      border-radius: var(--border-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .video-placeholder:hover {
+      transform: scale(1.05);
+    }
+
+    .video-title {
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .video-description {
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    /* Statistics Section */
+.stats-section {
+  background: linear-gradient(135deg, var(--primary-color), var(--dark-blue));
+  color: white;
+  border-radius: var(--border-radius-xl);
+  padding: 4rem 2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* reduced min width */
+  gap: 1.5rem; /* slightly smaller gap */
+}
+
+.stat-item {
+  padding: 1.2rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--border-radius-lg);
+  backdrop-filter: blur(10px);
+}
+
+.stat-number {
+  font-size: 2.5rem; /* reduced for mobile */
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .stats-section {
+    padding: 2rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.95rem;
+  }
+}
+
+
+    /* Footer */
+    .footer {
+      background: var(--dark-blue);
+      color: white;
+      padding: 3rem 1rem 1rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-logo {
+      margin-bottom: 2rem;
+    }
+
+    .join-online-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--secondary-color);
+      color: var(--text-dark);
+      padding: 1rem 2rem;
+      border-radius: var(--border-radius-lg);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      margin-bottom: 2rem;
+    }
+
+    .join-online-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-nav a:hover {
+      color: var(--secondary-color);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-icon:hover {
+      background: var(--secondary-color);
+      color: var(--text-dark);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1rem;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .pulse {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    /* Responsive Design */
+     @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        background: var(--background-white);
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-md);
+        z-index: 1000;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .videos-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    /* Animation Classes */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .fade-in.delay-1 { animation-delay: 0.1s; }
+    .fade-in.delay-2 { animation-delay: 0.2s; }
+    .fade-in.delay-3 { animation-delay: 0.3s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Fullscreen overlay menu */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary-color), var(--dark-blue));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+  z-index: 2000;
+}
+
+/* When active, slide in */
+.menu-overlay.active {
+  transform: translateX(0);
+}
+
+/* Close button */
+.menu-overlay header {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+}
+
+.menu-overlay .close-btn {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Overlay nav links */
+.menu-overlay nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.menu-overlay nav a {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Animate links */
+.menu-overlay.active nav a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-overlay nav a:nth-child(1) { transition-delay: 0.1s; }
+.menu-overlay nav a:nth-child(2) { transition-delay: 0.2s; }
+.menu-overlay nav a:nth-child(3) { transition-delay: 0.3s; }
+.menu-overlay nav a:nth-child(4) { transition-delay: 0.4s; }
+.menu-overlay nav a:nth-child(5) { transition-delay: 0.5s; }
+.menu-overlay nav a:nth-child(6) { transition-delay: 0.6s; }
+
+      /* override backgrounds */
+    header, .nav-bar, .header { background: linear-gradient(45deg,#003399,#800080,#cc0000) !important; color: #fff; }
+    footer, .footer { background: linear-gradient(45deg,#003399,#800080,#cc0000) !important; color: #fff; }
+
+</style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <div class="nav-content">
+      <div class="logo-section">
+        <img src="Images/AFFA-LOGO.png" alt="Apostolic Fire and Faith Assembly Logo" class="logo">
+        <div class="church-name">Apostolic Fire and Faith Assembly</div>
+      </div>
+      
+     <!-- Overlay Menu -->
+<div class="menu-overlay" id="menuOverlay">
+  <header>
+    <button class="close-btn" onclick="toggleOverlayMenu()">âœ–</button>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="livestream.html">Livestream</a>
+    <a href="give.html">Give</a>
+    <a href="expression.html">Locations</a>
+    <a href="#">Media</a>
+    <a href="about-us.html">About Us</a>
+  </nav>
+</div>
+
+<!-- Hamburger button (stays visible) -->
+<button class="mobile-menu-btn" onclick="toggleOverlayMenu()">
+  <i class="fas fa-bars"></i>
+</button>
+
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title fade-in">Our Mission</h1>
+      <p class="hero-subtitle fade-in delay-1">
+        Transforming lives through the power of the Gospel
+      </p>
+      <div class="mission-statement fade-in delay-2">
+        "Helping people to Know God by building a culture of Evangelism from Season to Season and mobilizing people to evangelize and Preach the Gospel."
+      </div>
+      <div class="cta-buttons fade-in delay-3">
+        <a href="project-giving.html" class="cta-btn primary">
+          <i class="fas fa-heart"></i>
+          Support Our Mission
+        </a>
+        <a href="expression.html" class="cta-btn secondary">
+          <i class="fas fa-map-marker-alt"></i>
+          Find a Location
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Mission Features Section -->
+    <section class="features-section">
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon pulse">
+            <i class="fas fa-bible"></i>
+          </div>
+          <h3 class="feature-title">Gospel Preaching</h3>
+          <p class="feature-description">
+            We are committed to preaching the unadulterated Gospel of Jesus Christ, ensuring that every person has the opportunity to hear the Good News and experience God's transforming love.
+          </p>
+        </div>
+
+        <div class="feature-card fade-in delay-1">
+          <div class="feature-icon pulse">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="feature-title">Discipleship</h3>
+          <p class="feature-description">
+            Making disciples is at the heart of our mission. We equip believers with the knowledge, skills, and passion needed to live out their faith and impact their communities.
+          </p>
+        </div>
+
+        <div class="feature-card fade-in delay-2">
+          <div class="feature-icon pulse">
+            <i class="fas fa-globe-americas"></i>
+          </div>
+          <h3 class="feature-title">Global Evangelism</h3>
+          <p class="feature-description">
+            Our evangelistic efforts span across continents, reaching people in Nigeria, the UK, USA, Canada, Belgium, and beyond with the life-changing message of Christ.
+          </p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon pulse">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h3 class="feature-title">Community Impact</h3>
+          <p class="feature-description">
+            We believe in practical Christianity that meets people's needs. Our mission includes community service, social justice, and caring for the marginalized.
+          </p>
+        </div>
+
+        <div class="feature-card fade-in delay-1">
+          <div class="feature-icon pulse">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <h3 class="feature-title">Church Planting</h3>
+          <p class="feature-description">
+            Establishing new churches is central to our mission. We plant churches that become centers of transformation in their communities, spreading God's kingdom.
+          </p>
+        </div>
+
+        <div class="feature-card fade-in delay-2">
+          <div class="feature-icon pulse">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 class="feature-title">Leadership Development</h3>
+          <p class="feature-description">
+            We invest in developing leaders who can carry the mission forward, training pastors, ministers, and lay leaders to serve effectively in God's kingdom.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section fade-in">
+      <h2 class="section-title">Mission in Action</h2>
+      <div class="videos-grid">
+        <div class="video-card">
+          <div class="video-placeholder" onclick="playVideo('evangelism')">
+            <i class="fas fa-play"></i>
+          </div>
+          <h4 class="video-title">Evangelism Outreach</h4>
+          <p class="video-description">See how we're reaching communities with the Gospel message</p>
+        </div>
+
+        <div class="video-card">
+          <div class="video-placeholder" onclick="playVideo('discipleship')">
+            <i class="fas fa-play"></i>
+          </div>
+          <h4 class="video-title">Discipleship Training</h4>
+          <p class="video-description">Equipping believers to grow in faith and serve effectively</p>
+        </div>
+
+        <div class="video-card">
+          <div class="video-placeholder" onclick="playVideo('missions')">
+            <i class="fas fa-play"></i>
+          </div>
+          <h4 class="video-title">Global Missions</h4>
+          <p class="video-description">Our international church planting and mission efforts</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section fade-in">
+      <h2 class="section-title">Mission Impact</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-target="50000">0</div>
+          <div class="stat-label">Lives Touched</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="25">0</div>
+          <div class="stat-label">Churches Planted</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="8">0</div>
+          <div class="stat-label">Countries Reached</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="500">0</div>
+          <div class="stat-label">Leaders Trained</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="logo-section">
+          <img src="Images/AFFA-LOGO.png" alt="Apostolic Fire and Faith Assembly Logo" class="logo">
+          <div class="church-name">Apostolic Fire and Faith Assembly</div>
+        </div>
+      </div>
+
+      <a href="#" target="_blank" class="join-online-btn">
+        <i class="fas fa-play"></i>
+        Join Us Online
+      </a>
+
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="livestream.html">Livestream</a>
+        <a href="give.html">Give</a>
+        <a href="expression.html">Locations</a>
+        <a href="get-connected.html">Contact</a>
+        <a href="get-connected.html?tab=prayer">Prayer Request</a>
+      </nav>
+
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" class="social-icon">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Apostolic Fire and Faith Assembly. All rights reserved.</p>
+        <p>We Celebrate You, Your Testimony Is Sure</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+     function toggleMobileMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+
+    // Video Play Function
+    function playVideo(type) {
+      const videoUrls = {
+        evangelism: 'https://www.youtube.com/watch?v=example1',
+        discipleship: 'https://www.youtube.com/watch?v=example2',
+        missions: 'https://www.youtube.com/watch?v=example3'
+      };
+
+      // Show toast message for now
+      showToast(`Playing ${type} video - Feature coming soon!`, 'info');
+
+      // In production, you would open the video or embed it
+      // window.open(videoUrls[type], '_blank');
+    }
+
+    // Toast notification system
+    function showToast(message, type = 'info') {
+      const toast = document.createElement('div');
+      toast.className = `toast toast-${type}`;
+      toast.textContent = message;
+
+      toast.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        color: white;
+        font-weight: 600;
+        z-index: 1000;
+        max-width: 400px;
+        animation: slideIn 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      `;
+
+      // Set background color based on type
+      if (type === 'success') {
+        toast.style.background = '#28a745';
+      } else if (type === 'error') {
+        toast.style.background = '#dc3545';
+      } else {
+        toast.style.background = '#003399';
+      }
+
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.animation = 'slideOut 0.3s ease forwards';
+        setTimeout(() => toast.remove(), 300);
+      }, 3000);
+    }
+
+    // Counter Animation for Statistics
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-number');
+
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const increment = target / 100;
+        let current = 0;
+
+        const updateCounter = () => {
+          if (current < target) {
+            current += increment;
+            counter.textContent = Math.floor(current).toLocaleString();
+            setTimeout(updateCounter, 20);
+          } else {
+            counter.textContent = target.toLocaleString();
+          }
+        };
+
+        updateCounter();
+      });
+    }
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+
+          // Trigger counter animation when stats section is visible
+          if (entry.target.classList.contains('stats-section')) {
+            animateCounters();
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Initialize animations and interactions
+    document.addEventListener('DOMContentLoaded', () => {
+      // Observe all fade-in elements
+      const fadeElements = document.querySelectorAll('.fade-in');
+      fadeElements.forEach(el => {
+        observer.observe(el);
+      });
+
+      // Add animation styles
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes slideIn {
+          from { transform: translateX(100%); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideOut {
+          from { transform: translateX(0); opacity: 1; }
+          to { transform: translateX(100%); opacity: 0; }
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Add hover effects to feature cards
+      const featureCards = document.querySelectorAll('.feature-card');
+      featureCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'translateY(-5px) scale(1)';
+        });
+      });
+
+      // Add click effects to video placeholders
+      const videoPlaceholders = document.querySelectorAll('.video-placeholder');
+      videoPlaceholders.forEach(placeholder => {
+        placeholder.addEventListener('click', () => {
+          placeholder.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            placeholder.style.transform = 'scale(1.05)';
+          }, 150);
+        });
+      });
+    });
+
+    // Smooth scrolling for CTA buttons
+    document.querySelectorAll('.cta-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (btn.getAttribute('href').startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(btn.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+function toggleOverlayMenu() {
+  document.getElementById("menuOverlay").classList.toggle("active");
+}
+
+    console.log('ðŸ™ Apostolic Fire and Faith Assembly - Mission page loaded successfully!');
+  </script>
+</body>
+</html>
+

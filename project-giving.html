@@ -1,0 +1,1411 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Optimization -->
+  <meta name="description" content="Support Apostolic Fire and Faith Assembly expansion projects. Contribute to building churches across Nigeria and internationally. One Church in Many Locations.">
+  <meta name="keywords" content="Apostolic Fire and Faith Assembly, church giving, project funding, church expansion, Nigeria, international, donations">
+  <meta property="og:title" content="Apostolic Fire and Faith Assembly - Project Giving">
+  <meta property="og:description" content="Support our vision of One Church in Many Locations. Contribute to building projects across Nigeria and internationally.">
+  <meta property="og:image" content="Images/AFFA-LOGO.png">
+  <meta property="og:url" content="https://faith-miracle-assembly.github.io/church-official-website/project-giving.html">
+  
+  <title>Apostolic Fire and Faith Assembly - Project Giving</title>
+  <link rel="icon" href="Images/AFFA-LOGO.png" type="image/png">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Performance: Preload critical resources -->
+  <link rel="preload" href="Images/AFFA-LOGO.png" as="image">
+  
+  <style>
+    /* Modern CSS Variables */
+    :root {
+      --primary-color: #003399;
+      --secondary-color: #ffffff;
+      --accent-color: #800080;
+      --action-color: #cc0000;
+      --dark-blue: #002266;
+      --text-dark: #000000;
+      --text-light: #333333;
+      --text-muted: #555555;
+      --background-light: #ffffff;
+      --background-white: #ffffff;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+      --shadow-xl: 0 20px 25px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.04);
+      --border-radius: 8px;
+      --border-radius-lg: 12px;
+      --border-radius-xl: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-primary: 'Inter', sans-serif;
+      --font-display: 'Playfair Display', serif;
+    }
+
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--background-light);
+      overflow-x: hidden;
+    }
+
+    /* Header Styles */
+    .header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+      padding: 2rem 1rem;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+      opacity: 0.1;
+      z-index: 1;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .church-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: white;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .back-btn:hover {
+      background: rgba(255,255,255,0.2);
+      color: var(--secondary-color);
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, white, var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .hero-verse {
+      font-style: italic;
+      font-size: 1.1rem;
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Main Content */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1rem;
+    }
+
+    /* Project Selection */
+    .project-selection {
+      background: var(--background-white);
+      border-radius: var(--border-radius-xl);
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 3rem;
+    }
+
+    .selection-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--text-dark);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .project-tabs {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .project-tab {
+      padding: 0.8rem 1.5rem;
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      background: var(--background-white);
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .project-tab.active,
+    .project-tab:hover {
+      border-color: var(--primary-color);
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .project-details {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      background: var(--background-light);
+      border-radius: var(--border-radius-lg);
+    }
+
+    .project-details.active {
+      display: block;
+    }
+
+    .project-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .project-description {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .project-progress {
+      margin-bottom: 2rem;
+    }
+
+    .progress-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 12px;
+      background: var(--border-color);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      border-radius: 6px;
+      transition: width 0.3s ease;
+    }
+
+    .funding-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+      background: var(--background-white);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Giving Form Styles */
+    .giving-form-section {
+      background: var(--background-white);
+      border-radius: var(--border-radius-xl);
+      padding: 3rem 2rem;
+      box-shadow: var(--shadow-xl);
+      margin-top: 3rem;
+    }
+
+    .form-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--text-dark);
+      text-align: center;
+      margin-bottom: 2rem;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .giving-form {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .amount-selection,
+    .donor-info,
+    .payment-methods {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .amount-selection h3,
+    .donor-info h3,
+    .payment-methods h3 {
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .amount-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .amount-btn {
+      padding: 1rem;
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      background: var(--background-white);
+      color: var(--text-dark);
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .amount-btn:hover,
+    .amount-btn.active {
+      border-color: var(--primary-color);
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .custom-amount {
+      text-align: center;
+    }
+
+    .custom-amount label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .custom-amount input {
+      width: 200px;
+      padding: 0.8rem;
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius);
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .custom-amount input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 0.5rem;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 0.8rem;
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+
+    .payment-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .payment-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1.5rem;
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      background: var(--background-white);
+      color: var(--text-dark);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .payment-btn:hover,
+    .payment-btn.active {
+      border-color: var(--primary-color);
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .payment-btn i {
+      font-size: 1.5rem;
+    }
+
+    .payment-details {
+      margin-bottom: 2rem;
+    }
+
+    .payment-detail {
+      display: none;
+      padding: 2rem;
+      background: var(--background-light);
+      border-radius: var(--border-radius-lg);
+    }
+
+    .payment-detail.active {
+      display: block;
+    }
+
+    .payment-detail h4 {
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .bank-info {
+      background: var(--background-white);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      margin-bottom: 1rem;
+    }
+
+    .bank-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .bank-item:last-child {
+      border-bottom: none;
+    }
+
+    .payment-note {
+      background: #fff3cd;
+      color: #856404;
+      padding: 1rem;
+      border-radius: var(--border-radius);
+      border-left: 4px solid #ffc107;
+    }
+
+    .contact-options {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .contact-btn:hover {
+      background: var(--dark-blue);
+      transform: translateY(-2px);
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+      color: var(--text-dark);
+      border: none;
+      border-radius: var(--border-radius-lg);
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .submit-btn i {
+      margin-right: 0.5rem;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background: var(--dark-blue);
+      color: white;
+      padding: 3rem 1rem 1rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-logo {
+      margin-bottom: 2rem;
+    }
+
+    .footer-text {
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer-text p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-nav a:hover {
+      color: var(--secondary-color);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-icon:hover {
+      background: var(--secondary-color);
+      color: var(--text-dark);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1rem;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .amount-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .payment-options {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-options {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .footer-nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+      /* override backgrounds */
+    header, .nav-bar, .header { background: linear-gradient(45deg,#003399,#800080,#cc0000) !important; color: #fff; }
+    footer, .footer { background: linear-gradient(45deg,#003399,#800080,#cc0000) !important; color: #fff; }
+
+</style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <nav class="nav-bar">
+        <div class="logo-section">
+          <img src="Images/AFFA-LOGO.png" alt="Apostolic Fire and Faith Assembly Logo" class="logo">
+          <div class="church-name">Apostolic Fire and Faith Assembly</div>
+        </div>
+        
+        <a href="expression.html" class="back-btn">
+          <i class="fas fa-arrow-left"></i>
+          Back to Locations
+        </a>
+      </nav>
+
+      <div class="hero-section">
+        <h1 class="hero-title">Project Giving</h1>
+        <p class="hero-subtitle">Building God's Kingdom Together</p>
+        <p class="hero-verse">"Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity: for God loveth a cheerful giver." - 2 Corinthians 9:7</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Project Selection -->
+    <div class="project-selection">
+      <h2 class="selection-title">Choose a Project to Support</h2>
+
+      <div class="project-tabs">
+        <button class="project-tab active" onclick="showProject('all')">All Projects</button>
+        <button class="project-tab" onclick="showProject('lagos')">Lagos Expansion</button>
+        <button class="project-tab" onclick="showProject('abuja')">Abuja Campus</button>
+        <button class="project-tab" onclick="showProject('portharcourt')">Port Harcourt</button>
+        <button class="project-tab" onclick="showProject('kano')">Kano Campus</button>
+        <button class="project-tab" onclick="showProject('uk')">United Kingdom</button>
+        <button class="project-tab" onclick="showProject('usa')">USA Partnership</button>
+        <button class="project-tab" onclick="showProject('canada')">Canada Partnership</button>
+        <button class="project-tab" onclick="showProject('belgium')">Belgium Campus</button>
+      </div>
+
+      <!-- All Projects -->
+      <div id="project-all" class="project-details active">
+        <h3 class="project-name">Support All Expansion Projects</h3>
+        <p class="project-description">
+          Your contribution will be distributed across all our expansion projects,
+          helping us establish churches in multiple locations simultaneously.
+        </p>
+        <div class="project-progress">
+          <div class="progress-info">
+            <span>Overall Progress</span>
+            <span>45% Complete</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 45%"></div>
+          </div>
+        </div>
+        <div class="funding-stats">
+          <div class="stat-item">
+            <div class="stat-value">â‚¦125M</div>
+            <div class="stat-label">Raised</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">â‚¦275M</div>
+            <div class="stat-label">Goal</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">1,247</div>
+            <div class="stat-label">Supporters</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">9</div>
+            <div class="stat-label">Locations</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lagos Project -->
+      <div id="project-lagos" class="project-details">
+        <h3 class="project-name">Lagos Expansion Project</h3>
+        <p class="project-description">
+          Establishing multiple campuses across Lagos State to reach more communities
+          with the Gospel. This includes land acquisition, construction, and equipment.
+        </p>
+        <div class="project-progress">
+          <div class="progress-info">
+            <span>Project Progress</span>
+            <span>35% Complete</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 35%"></div>
+          </div>
+        </div>
+        <div class="funding-stats">
+          <div class="stat-item">
+            <div class="stat-value">â‚¦17.5M</div>
+            <div class="stat-label">Raised</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">â‚¦50M</div>
+            <div class="stat-label">Goal</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">234</div>
+            <div class="stat-label">Supporters</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Abuja Project -->
+      <div id="project-abuja" class="project-details">
+        <h3 class="project-name">Abuja Campus Development</h3>
+        <p class="project-description">
+          Federal Capital Territory campus serving government workers and residents.
+          Focus on building completion and ministry equipment.
+        </p>
+        <div class="project-progress">
+          <div class="progress-info">
+            <span>Project Progress</span>
+            <span>80% Complete</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="funding-stats">
+          <div class="stat-item">
+            <div class="stat-value">â‚¦24M</div>
+            <div class="stat-label">Raised</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">â‚¦30M</div>
+            <div class="stat-label">Goal</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">189</div>
+            <div class="stat-label">Supporters</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Port Harcourt Project -->
+      <div id="project-portharcourt" class="project-details">
+        <h3 class="project-name">Port Harcourt Campus</h3>
+        <p class="project-description">
+          Reaching the oil-rich Rivers State with the Gospel of Jesus Christ.
+          Initial phase includes land acquisition and foundation work.
+        </p>
+        <div class="project-progress">
+          <div class="progress-info">
+            <span>Project Progress</span>
+            <span>15% Complete</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 15%"></div>
+          </div>
+        </div>
+        <div class="funding-stats">
+          <div class="stat-item">
+            <div class="stat-value">â‚¦6M</div>
+            <div class="stat-label">Raised</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">â‚¦40M</div>
+            <div class="stat-label">Goal</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">98</div>
+            <div class="stat-label">Supporters</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kano Project -->
+      <div id="project-kano" class="project-details">
+        <h3 class="project-name">Kano Campus Vision</h3>
+        <p class="project-description">
+          Bringing hope and transformation to Northern Nigeria.
+          This is a long-term vision requiring significant prayer and financial support.
+        </p>
+        <div class="project-progress">
+          <div class="progress-info">
+            <span>Project Progress</span>
+            <span>5% Complete</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 5%"></div>
+          </div>
+        </div>
+        <div class="funding-stats">
+          <div class="stat-item">
+            <div class="stat-value">â‚¦2M</div>
+            <div class="stat-label">Raised</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">â‚¦35M</div>
+            <div class="stat-label">Goal</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">45</div>
+            <div class="stat-label">Supporters</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UK Project -->
+      <div id="project-uk" class="project-details">
+        <h3 class="project-name">United Kingdom Campus</h3>
+        <p class="project-description">
+          Serving the Nigerian diaspora and local communities in the UK.
+          Focus on ministry expansion and community outreach programs.
+        </p>
+        <div class="project-progress">
+          <div class="progress-info">
+            <span>Project Progress</span>
+            <span>90% Complete</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="funding-stats">
+          <div class="stat-item">
+            <div class="stat-value">Â£18K</div>
+            <div class="stat-label">Raised</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">Â£20K</div>
+            <div class="stat-label">Goal</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">156</div>
+            <div class="stat-label">Supporters</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- USA Project -->
+      <div id="project-usa" class="project-details">
+        <h3 class="project-name">USA - Pistis Life Partnership</h3>
+        <p class="project-description">
+          Strategic partnership expanding our reach across North America.
+          Supporting ministry development and community programs.
+        </p>
+        <div class="project-progress">
+          <div class="progress-info">
+            <span>Project Progress</span>
+            <span>60% Complete</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 60%"></div>
+          </div>
+        </div>
+        <div class="funding-stats">
+          <div class="stat-item">
+            <div class="stat-value">$15K</div>
+            <div class="stat-label">Raised</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">$25K</div>
+            <div class="stat-label">Goal</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">89</div>
+            <div class="stat-label">Supporters</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Canada Project -->
+      <div id="project-canada" class="project-details">
+        <h3 class="project-name">Canada - Elevate Partnership</h3>
+        <p class="project-description">
+          Elevating communities across Canada through Gospel transformation.
+          Partnership development and ministry resource allocation.
+        </p>
+        <div class="project-progress">
+          <div class="progress-info">
+            <span>Project Progress</span>
+            <span>45% Complete</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 45%"></div>
+          </div>
+        </div>
+        <div class="funding-stats">
+          <div class="stat-item">
+            <div class="stat-value">C$9K</div>
+            <div class="stat-label">Raised</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">C$20K</div>
+            <div class="stat-label">Goal</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">67</div>
+            <div class="stat-label">Supporters</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Belgium Project -->
+      <div id="project-belgium" class="project-details">
+        <h3 class="project-name">Belgium Campus Development</h3>
+        <p class="project-description">
+          Establishing a strong European presence in the heart of Belgium.
+          Initial setup and community engagement initiatives.
+        </p>
+        <div class="project-progress">
+          <div class="progress-info">
+            <span>Project Progress</span>
+            <span>25% Complete</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 25%"></div>
+          </div>
+        </div>
+        <div class="funding-stats">
+          <div class="stat-item">
+            <div class="stat-value">â‚¬5K</div>
+            <div class="stat-label">Raised</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">â‚¬20K</div>
+            <div class="stat-label">Goal</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">34</div>
+            <div class="stat-label">Supporters</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Giving Form -->
+    <div class="giving-form-section">
+      <h2 class="form-title">Make Your Contribution</h2>
+      <div class="giving-form">
+        <div class="amount-selection">
+          <h3>Select Amount</h3>
+          <div class="amount-buttons">
+            <button class="amount-btn" onclick="selectAmount(1000)">â‚¦1,000</button>
+            <button class="amount-btn" onclick="selectAmount(5000)">â‚¦5,000</button>
+            <button class="amount-btn" onclick="selectAmount(10000)">â‚¦10,000</button>
+            <button class="amount-btn" onclick="selectAmount(25000)">â‚¦25,000</button>
+            <button class="amount-btn" onclick="selectAmount(50000)">â‚¦50,000</button>
+            <button class="amount-btn" onclick="selectAmount(100000)">â‚¦100,000</button>
+          </div>
+          <div class="custom-amount">
+            <label for="customAmount">Or enter custom amount:</label>
+            <input type="number" id="customAmount" placeholder="Enter amount" min="100">
+          </div>
+        </div>
+
+        <div class="donor-info">
+          <h3>Your Information</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" rows="3" placeholder="Share your heart or prayer request..."></textarea>
+          </div>
+        </div>
+
+        <div class="payment-methods">
+          <h3>Payment Method</h3>
+          <div class="payment-options">
+            <button class="payment-btn active" onclick="selectPayment('bank')">
+              <i class="fas fa-university"></i>
+              Bank Transfer
+            </button>
+            <button class="payment-btn" onclick="selectPayment('card')">
+              <i class="fas fa-credit-card"></i>
+              Debit/Credit Card
+            </button>
+            <button class="payment-btn" onclick="selectPayment('mobile')">
+              <i class="fas fa-mobile-alt"></i>
+              Mobile Money
+            </button>
+          </div>
+        </div>
+
+        <div class="payment-details">
+          <!-- Bank Transfer Details -->
+          <div id="bank-details" class="payment-detail active">
+            <h4>Bank Transfer Details</h4>
+            <div class="bank-info">
+              <div class="bank-item">
+                <strong>Bank Name:</strong> First Bank of Nigeria
+              </div>
+              <div class="bank-item">
+                <strong>Account Name:</strong> Apostolic Fire and Faith Assembly
+              </div>
+              <div class="bank-item">
+                <strong>Account Number:</strong> 2034567890
+              </div>
+              <div class="bank-item">
+                <strong>Sort Code:</strong> 011-152-003
+              </div>
+            </div>
+            <p class="payment-note">
+              Please send proof of payment to <strong>contact@apostolicfirefaithassembly.org</strong>
+              or WhatsApp <strong>08067391469</strong>
+            </p>
+          </div>
+
+          <!-- Card Payment -->
+          <div id="card-details" class="payment-detail">
+            <h4>Card Payment</h4>
+            <p>Secure online payment coming soon. For now, please use bank transfer or contact us directly.</p>
+            <div class="contact-options">
+              <a href="tel:+2347032915555" class="contact-btn">
+                <i class="fas fa-phone"></i>
+                Call: 070 3291 5555
+              </a>
+              <a href="https://wa.me/2347032915555" class="contact-btn">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile Money -->
+          <div id="mobile-details" class="payment-detail">
+            <h4>Mobile Money</h4>
+            <p>Mobile money integration coming soon. For immediate giving, please use:</p>
+            <div class="contact-options">
+              <a href="tel:+2347032915555" class="contact-btn">
+                <i class="fas fa-phone"></i>
+                Call: 070 3291 5555
+              </a>
+              <a href="https://wa.me/2347032915555" class="contact-btn">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="submit-btn" onclick="submitGiving()">
+            <i class="fas fa-heart"></i>
+            Complete Your Giving
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="logo-section">
+          <img src="Images/AFFA-LOGO.png" alt="Apostolic Fire and Faith Assembly Logo" class="logo">
+          <div class="church-name">Apostolic Fire and Faith Assembly</div>
+        </div>
+      </div>
+
+      <div class="footer-text">
+        <p>"Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity: for God loveth a cheerful giver." - 2 Corinthians 9:7</p>
+        <p>Thank you for partnering with us to build God's kingdom across Nigeria and internationally.</p>
+      </div>
+
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="expression.html">Locations</a>
+        <a href="about-us.html">About Us</a>
+        <a href="get-connected.html">Contact</a>
+        <a href="get-connected.html?tab=prayer">Prayer Request</a>
+      </nav>
+
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" class="social-icon">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Apostolic Fire and Faith Assembly. All rights reserved.</p>
+        <p>Building God's Kingdom - One Church in Many Locations</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Project selection functionality
+    function showProject(projectId) {
+      // Hide all project details
+      const allProjects = document.querySelectorAll('.project-details');
+      allProjects.forEach(project => {
+        project.classList.remove('active');
+      });
+
+      // Remove active class from all tabs
+      const allTabs = document.querySelectorAll('.project-tab');
+      allTabs.forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      // Show selected project
+      const selectedProject = document.getElementById(`project-${projectId}`);
+      if (selectedProject) {
+        selectedProject.classList.add('active');
+      }
+
+      // Add active class to clicked tab
+      event.target.classList.add('active');
+
+      // Update URL parameter
+      const url = new URL(window.location);
+      url.searchParams.set('project', projectId);
+      window.history.replaceState({}, '', url);
+    }
+
+    // Amount selection functionality
+    let selectedAmount = 0;
+
+    function selectAmount(amount) {
+      selectedAmount = amount;
+      
+      // Remove active class from all amount buttons
+      const allAmountBtns = document.querySelectorAll('.amount-btn');
+      allAmountBtns.forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      // Add active class to clicked button
+      event.target.classList.add('active');
+
+      // Clear custom amount input
+      document.getElementById('customAmount').value = '';
+    }
+
+    // Custom amount input handler
+    document.getElementById('customAmount').addEventListener('input', function() {
+      selectedAmount = parseInt(this.value) || 0;
+      
+      // Remove active class from preset amount buttons
+      const allAmountBtns = document.querySelectorAll('.amount-btn');
+      allAmountBtns.forEach(btn => {
+        btn.classList.remove('active');
+      });
+    });
+
+    // Payment method selection
+    function selectPayment(method) {
+      // Remove active class from all payment buttons
+      const allPaymentBtns = document.querySelectorAll('.payment-btn');
+      allPaymentBtns.forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      // Add active class to clicked button
+      event.target.classList.add('active');
+
+      // Hide all payment details
+      const allPaymentDetails = document.querySelectorAll('.payment-detail');
+      allPaymentDetails.forEach(detail => {
+        detail.classList.remove('active');
+      });
+
+      // Show selected payment detail
+      const selectedDetail = document.getElementById(`${method}-details`);
+      if (selectedDetail) {
+        selectedDetail.classList.add('active');
+      }
+    }
+
+    // Form submission
+    function submitGiving() {
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const message = document.getElementById('message').value;
+
+      // Basic validation
+      if (!firstName || !lastName || !email) {
+        showToast('Please fill in all required fields', 'error');
+        return;
+      }
+
+      if (selectedAmount < 100) {
+        showToast('Please select or enter an amount of at least â‚¦100', 'error');
+        return;
+      }
+
+      // Get selected project
+      const activeProject = document.querySelector('.project-details.active');
+      const projectName = activeProject ? activeProject.querySelector('.project-name').textContent : 'All Projects';
+
+      // Create giving summary
+      const givingSummary = {
+        amount: selectedAmount,
+        project: projectName,
+        donor: {
+          firstName,
+          lastName,
+          email,
+          phone,
+          message
+        },
+        timestamp: new Date().toISOString()
+      };
+
+      // Store in localStorage for reference
+      localStorage.setItem('lastGiving', JSON.stringify(givingSummary));
+
+      // Show success message
+      showToast('Thank you for your generous heart! Please complete your payment using the selected method.', 'success');
+
+      // Scroll to payment details
+      document.querySelector('.payment-details').scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+
+    // Toast notification system
+    function showToast(message, type = 'info') {
+      const toast = document.createElement('div');
+      toast.className = `toast toast-${type}`;
+      toast.textContent = message;
+      
+      toast.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        color: white;
+        font-weight: 600;
+        z-index: 1000;
+        max-width: 400px;
+        animation: slideIn 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      `;
+
+      // Set background color based on type
+      if (type === 'success') {
+        toast.style.background = '#28a745';
+      } else if (type === 'error') {
+        toast.style.background = '#dc3545';
+      } else {
+        toast.style.background = '#003399';
+      }
+
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.animation = 'slideOut 0.3s ease forwards';
+        setTimeout(() => toast.remove(), 300);
+      }, 5000);
+    }
+
+    // Initialize page based on URL parameters
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const projectParam = urlParams.get('project');
+      
+      if (projectParam && projectParam !== 'all') {
+        // Find and click the corresponding tab
+        const targetTab = Array.from(document.querySelectorAll('.project-tab'))
+          .find(tab => tab.textContent.toLowerCase().includes(projectParam.toLowerCase()) || 
+                       tab.onclick.toString().includes(projectParam));
+        
+        if (targetTab) {
+          targetTab.click();
+        }
+      }
+
+      // Add animation styles
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes slideIn {
+          from { transform: translateX(100%); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideOut {
+          from { transform: translateX(0); opacity: 1; }
+          to { transform: translateX(100%); opacity: 0; }
+        }
+        .toast {
+          animation: slideIn 0.3s ease;
+        }
+      `;
+      document.head.appendChild(style);
+    });
+
+    // Copy bank details functionality
+    function copyBankDetails() {
+      const bankDetails = `
+Bank Name: First Bank of Nigeria
+Account Name: Apostolic Fire and Faith Assembly
+Account Number: 2034567890
+Sort Code: 011-152-003
+      `.trim();
+
+      navigator.clipboard.writeText(bankDetails).then(() => {
+        showToast('Bank details copied to clipboard!', 'success');
+      }).catch(() => {
+        showToast('Unable to copy. Please copy manually.', 'error');
+      });
+    }
+
+    // Add click-to-copy functionality to bank details
+    document.addEventListener('DOMContentLoaded', function() {
+      const bankInfo = document.querySelector('.bank-info');
+      if (bankInfo) {
+        bankInfo.style.cursor = 'pointer';
+        bankInfo.title = 'Click to copy bank details';
+        bankInfo.addEventListener('click', copyBankDetails);
+      }
+    });
+
+    console.log('ðŸ™ Apostolic Fire and Faith Assembly - Project Giving page loaded successfully!');
+  </script>
+</body>
+</html>
+

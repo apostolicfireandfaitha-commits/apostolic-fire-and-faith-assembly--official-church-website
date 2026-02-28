@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apostolic Fire and Faith Assembly â€“ Get Connected</title>
+  <meta name="description" content="Join Apostolic Fire and Faith Assembly. Become a member, request counselling, or submit a prayer request. We welcome you to ASABA â€“ your spiritual home." />
+  <link rel="icon" href="Images/FMA-LOGO.png" type="image/png">
+
+  <style>
+    /* ===== Reset & Base Styles ===== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #f9f9fb; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { margin-bottom: .5em; }
+    p { margin-bottom: 1em; }
+
+    /* ===== Layout ===== */
+    header { background: #fff; border-bottom: 1px solid #ddd; position:relative; top: 0; z-index: 1000; }
+    header .container { max-width: 1100px; margin: 0 auto; padding: 1rem; display: flex; align-items: center; justify-content: space-between; }
+    header img { height: 40px; border-radius: 6px; }
+
+    /* ===== Nav ===== */
+    nav ul { display: flex; list-style: none; gap: 1rem; }
+    nav ul li { font-weight: 600; }
+    .hamburger, .close-btn { display: none; cursor: pointer; font-size: 1.5rem; }
+
+    /* Mobile menu */
+    @media (max-width: 768px) {
+      nav ul { 
+        position: fixed; 
+        top: 0; 
+        right: -100%; 
+        width: 70%; 
+        height: 100%; 
+        background: #fff; 
+        flex-direction: column; 
+        padding: 2rem; 
+        gap: 1.5rem;
+        transition: right .3s ease-in-out;
+        box-shadow: -2px 0 8px rgba(0,0,0,.1);
+      }
+      nav ul.active { right: 0; }
+      .hamburger { display: block; }
+      .close-btn { display: block; align-self: flex-end; margin-bottom: 2rem; }
+    }
+
+    main { max-width: 1100px; margin: 2rem auto; padding: 1rem; }
+    footer { background: #222; color: #ddd; padding: 2rem 1rem; text-align: center; }
+    footer h3 { color: #fff; margin-bottom: .5rem; }
+    footer p, footer a { font-size: .9rem; color: #ccc; }
+    footer a:hover { color: #fff; }
+
+    /* ===== Tabs ===== */
+    .tabs { display: flex; border-bottom: 2px solid #eee; margin-bottom: 1.5rem; }
+    .tab { flex: 1; padding: 1rem; text-align: center; cursor: pointer; font-weight: 600; background: #f1f1f6; border: 1px solid #ddd; border-bottom: none; transition: background .3s; }
+    .tab.active { background: #fff; color: #0073e6; border-top: 3px solid #0073e6; }
+    .tab:not(.active):hover { background: #e9e9f1; }
+
+    .tab-content { display: none; background: #fff; padding: 2rem; border: 1px solid #ddd; border-radius: 0 0 6px 6px; }
+    .tab-content.active { display: block; }
+
+    /* ===== Forms ===== */
+    form { display: flex; flex-direction: column; gap: 1rem; }
+    label { font-weight: 600; margin-bottom: .3rem; }
+    input, select, textarea { width: 100%; padding: .6rem; border: 1px solid #ccc; border-radius: 6px; }
+    textarea { resize: vertical; min-height: 100px; }
+    .consent { display: flex; align-items: flex-start; gap: .5rem; font-size: .9rem; }
+    .form-message { margin-top: 10px; font-size: 0.9em; }
+    .form-message.success { color: green; }
+    .form-message.error { color: red; }
+
+    button { padding: .7rem 1.5rem; background: #0073e6; color: #fff; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; transition: background .3s; }
+    button:hover { background: #005bb5; }
+    button.secondary { background: #f1f1f1; color: #333; }
+    button.secondary:hover { background: #ddd; }
+      /* override backgrounds */
+    header, .nav-bar, .header { background: linear-gradient(45deg,#003399,#800080,#cc0000) !important; color: #fff; }
+    footer, .footer { background: linear-gradient(45deg,#003399,#800080,#cc0000) !important; color: #fff; }
+
+</style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div style="display: flex; align-items: center; gap: .8rem;">
+        <img src="Images/FMA-LOGO.png" alt="Apostolic Fire and Faith Assembly Logo" loading="lazy">
+        <div>
+          <h1 style="font-size: 1.2rem;">Apostolic Fire and Faith Assembly</h1>
+          <p style="font-size: .8rem; color: #555;">ASABA â€¢ Welcome Home</p>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <div class="hamburger" aria-label="Open Menu" aria-expanded="false" role="button" tabindex="0">â˜°</div>
+        <ul>
+          <li class="close-btn" role="button" tabindex="0">âœ–</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="livestream.html">LiveStream</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <h2 id="main-heading">Get Connected</h2>
+    <p id="main-subtext">Become a member, Request counselling, Submit a prayer request.</p>
+
+    <div class="tabs" role="tablist">
+      <div class="tab active" data-tab="membership" role="tab" tabindex="0">Become a Member</div>
+      <div class="tab" data-tab="counselling" role="tab" tabindex="0">Request Counselling</div>
+      <div class="tab" data-tab="prayer" role="tab" tabindex="0">Prayer Request</div>
+    </div>
+
+    <!-- Membership -->
+    <div class="tab-content active" id="membership" role="tabpanel">
+      <form method="POST" action="https://script.google.com/macros/s/AKfycbzClHbCIsdB9S2lnq9KE6Iz7P_mKNQ-GMqA0GMQTsWxeotiQI8xb-emb3j1zwn4u_754Q/exec">
+        <input type="hidden" name="formType" value="membership">
+        <label for="firstName">First Name *</label>
+        <input type="text" name="firstName" id="firstName" required>
+        <label for="lastName">Last Name *</label>
+        <input type="text" name="lastName" id="lastName" required>
+        <label for="email">Email *</label>
+        <input type="email" name="email" id="email" required>
+        <label for="phone">Phone *</label>
+        <input type="tel" name="phone" id="phone" required>
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address">
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" id="dob">
+        <label for="marital">Marital Status</label>
+        <select name="marital" id="marital">
+          <option value="single">Single</option>
+          <option value="married">Married</option>
+          <option value="engaged">Engaged</option>
+          <option value="widowed">Widowed</option>
+        </select>
+        <div class="consent">
+          <input type="checkbox" id="m-consent" name="consent" required>
+          <label for="m-consent">I consent to Apostolic Fire and Faith Assembly storing and using my information *</label>
+        </div>
+        <div style="display: flex; justify-content: flex-end;">
+          <button type="submit">Submit Application</button>
+        </div>
+        <div class="form-message" role="alert"></div>
+      </form>
+    </div>
+
+    <!-- Counselling -->
+    <div class="tab-content" id="counselling" role="tabpanel">
+      <form method="POST" action="https://script.google.com/macros/s/AKfycbzClHbCIsdB9S2lnq9KE6Iz7P_mKNQ-GMqA0GMQTsWxeotiQI8xb-emb3j1zwn4u_754Q/exec">
+        <input type="hidden" name="formType" value="counselling">
+        <label for="c-firstName">First Name *</label>
+        <input type="text" name="firstName" id="c-firstName" required>
+        <label for="c-lastName">Last Name *</label>
+        <input type="text" name="lastName" id="c-lastName" required>
+        <label for="c-email">Email *</label>
+        <input type="email" name="email" id="c-email" required>
+        <label for="c-phone">Phone *</label>
+        <input type="tel" name="phone" id="c-phone" required>
+        <label for="topic">Topic</label>
+        <select name="topic" id="topic">
+          <option value="marriage">Marriage</option>
+          <option value="family">Family</option>
+          <option value="financial">Financial</option>
+          <option value="spiritual">Spiritual</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="summary">Brief Summary *</label>
+        <textarea name="summary" id="summary" required></textarea>
+        <div class="consent">
+          <input type="checkbox" id="c-consent" name="consent" required>
+          <label for="c-consent">I consent to Apostolic Fire and Faith Assembly using my information to arrange counselling *</label>
+        </div>
+        <div style="display: flex; justify-content: flex-end;">
+          <button type="submit">Submit Request</button>
+        </div>
+        <div class="form-message" role="alert"></div>
+      </form>
+    </div>
+
+    <!-- Prayer -->
+    <div class="tab-content" id="prayer" role="tabpanel">
+      <form method="POST" action="https://script.google.com/macros/s/AKfycbzClHbCIsdB9S2lnq9KE6Iz7P_mKNQ-GMqA0GMQTsWxeotiQI8xb-emb3j1zwn4u_754Q/exec">
+        <input type="hidden" name="formType" value="prayer">
+        <label for="p-firstName">First Name *</label>
+        <input type="text" name="firstName" id="p-firstName" required>
+        <label for="p-lastName">Last Name *</label>
+        <input type="text" name="lastName" id="p-lastName" required>
+        <label for="p-email">Email (optional)</label>
+        <input type="email" name="email" id="p-email">
+        <label for="p-phone">Phone *</label>
+        <input type="tel" name="phone" id="p-phone" required>
+        <label for="category">Category</label>
+        <select name="category" id="category">
+          <option value="healing">Healing</option>
+          <option value="breakthrough">Breakthrough</option>
+          <option value="family">Family</option>
+          <option value="deliverance">Deliverance</option>
+          <option value="thanksgiving">Thanksgiving</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="request">Your Prayer Request *</label>
+        <textarea name="request" id="request" required></textarea>
+        <div class="consent">
+          <input type="checkbox" id="subscribe" name="subscribe" checked>
+          <label for="subscribe">Email me encouraging updates</label>
+        </div>
+        <div style="display: flex; justify-content: flex-end;">
+          <button type="submit">Send Request</button>
+        </div>
+        <div class="form-message" role="alert"></div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h3>Apostolic Fire and Faith Assembly</h3>
+    <p>Apostolic Fire and Faith Assembly</p>
+    <p>Â© <script>document.write(new Date().getFullYear())</script> Apostolic Fire and Faith Assembly. All rights reserved.</p>
+  </footer>
+
+  <script defer>
+    /* =============================
+       Tabs with URL/hash support
+    ============================== */
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    const mainHeading = document.getElementById('main-heading');
+    const mainSubtext = document.getElementById('main-subtext');
+
+    function openTab(tabName) {
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+      document.querySelector(`.tab[data-tab="${tabName}"]`).classList.add('active');
+      document.getElementById(tabName).classList.add('active');
+
+      // Update heading/subtext
+      switch (tabName) {
+        case "prayer":
+          mainHeading.textContent = "Submit a Prayer Request";
+          mainSubtext.textContent = "Let us stand in faith with you through prayer.";
+          break;
+        case "counselling":
+          mainHeading.textContent = "Request Counselling";
+          mainSubtext.textContent = "We are here to support and guide you.";
+          break;
+        default:
+          mainHeading.textContent = "Become a Member";
+          mainSubtext.textContent = "Join our family and grow with us.";
+      }
+    }
+
+    function handleHash() {
+      const hash = window.location.hash.replace("#", "");
+      if (hash) openTab(hash);
+    }
+    window.addEventListener("hashchange", handleHash);
+    handleHash();
+
+    // Tab click
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const tabName = tab.dataset.tab;
+        history.pushState(null, null, "#" + tabName);
+        openTab(tabName);
+      });
+    });
+
+    // Query param ?tab=
+    const params = new URLSearchParams(window.location.search);
+    const tabParam = params.get("tab");
+    if (tabParam) openTab(tabParam);
+
+    /* =============================
+       Form Handling (Reusable)
+    ============================== */
+    function validatePhone(phone) {
+      let clean = phone.trim();
+      const digits = clean.replace(/\D/g, "");
+      if (digits.length < 11) return { valid: false, message: "âŒ Phone number must be at least 11 digits." };
+
+      // Normalize to +234
+      if (clean.startsWith("0")) {
+        clean = "+234" + clean.slice(1);
+      } else if (!clean.startsWith("+234")) {
+        clean = "+234" + clean;
+      }
+      return { valid: true, normalized: clean };
+    }
+
+    function validateEmail(email) {
+      if (!email) return true; 
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+
+    function showMessage(form, msg, type) {
+      const msgBox = form.querySelector(".form-message");
+      msgBox.textContent = msg;
+      msgBox.className = "form-message " + type;
+      if (msg) msgBox.focus(); // accessibility: move focus to message
+    }
+
+    function handleFormSubmit(form) {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const submitBtn = form.querySelector("button[type='submit']");
+
+        // Reset messages
+        showMessage(form, "", "");
+
+        // Phone validation
+        let phone = data.get("phone");
+        if (phone) {
+          const { valid, normalized, message } = validatePhone(phone);
+          if (!valid) {
+            showMessage(form, message, "error");
+            return;
+          }
+          data.set("phone", normalized);
+        }
+
+        // Email validation
+        const email = data.get("email");
+        if (email && !validateEmail(email)) {
+          showMessage(form, "âŒ Please enter a valid email.", "error");
+          return;
+        }
+
+        // Prevent double submission
+        submitBtn.disabled = true;
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = "Submitting...";
+
+        fetch(form.action, { method: "POST", body: data })
+          .then((res) => res.json())
+          .then((json) => {
+            if (json.result === "success") {
+              showMessage(form, "âœ… Submitted successfully!", "success");
+              form.reset();
+              if (form.querySelector("#subscribe")) {
+                form.querySelector("#subscribe").checked = true;
+              }
+            } else {
+              showMessage(form, "âŒ " + (json.message || "Submission failed."), "error");
+            }
+          })
+          .catch(() => showMessage(form, "âŒ Network error. Try again.", "error"))
+                   .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+          });
+      });
+    }
+
+    // Attach handler to all forms
+    document.querySelectorAll("form").forEach(handleFormSubmit);
+
+    /* =============================
+       Hamburger Menu
+    ============================== */
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("nav ul");
+    const closeBtn = document.querySelector(".close-btn");
+
+    if (hamburger && navMenu && closeBtn) {
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.add("active");
+        hamburger.setAttribute("aria-expanded", "true");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
+      });
+
+      document.querySelectorAll("nav ul li a").forEach(link => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          hamburger.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+  </script>
+</body>
+</html>
+
+

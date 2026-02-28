@@ -1,0 +1,541 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apostolic Fire and Faith Assembly Live Stream</title>
+  <link rel="icon" href="Images/AFFA-LOGO.png" type="image/png">
+  <style>
+    :root {
+      --primary-color: #003399;
+      --secondary-color: #ffffff;
+      --accent-color: #800080;
+      --action-color: #cc0000;
+      --light-bg: #ffffff;
+      --dark-bg: #002266;
+      --light-text: #000000;
+      --dark-text: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--light-bg);
+      color: var(--light-text);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background: var(--dark-bg);
+      color: var(--dark-text);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--primary);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo img {
+      height: 45px;
+    }
+
+    nav a {
+      margin: 0 0.8rem;
+      text-decoration: none;
+      font-weight: 600;
+      color: #fff;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    .menu-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(1, 20, 31, 0.97);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 2000;
+}
+
+/* Show state */
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Inside header of overlay */
+.menu-overlay header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: none;
+  color: #fff;
+}
+
+.menu-overlay header img {
+  height: 40px;
+}
+
+.menu-overlay header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Close button */
+/* Close button */
+.menu-overlay header button {
+  position: absolute;
+  top: 15px;
+  right: -40px;   /* â¬…ï¸ shifted further right */
+  background: none;
+  border: none;
+  font-size: 2rem; /* slightly bigger */
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Overlay nav links */
+.menu-overlay nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;   /* â¬…ï¸ more spacing between links */
+  margin-top: 4rem; /* push down a little more from header */
+  text-align: center;
+}
+
+.menu-overlay nav a {
+  font-size: 2.1rem;  /* slightly bigger for readability */
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+/* Animate links in sequence */
+.menu-overlay.active nav a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-overlay.active nav a:nth-child(1) { transition-delay: 0.1s; }
+.menu-overlay.active nav a:nth-child(2) { transition-delay: 0.2s; }
+.menu-overlay.active nav a:nth-child(3) { transition-delay: 0.3s; }
+.menu-overlay.active nav a:nth-child(4) { transition-delay: 0.4s; }
+.menu-overlay.active nav a:nth-child(5) { transition-delay: 0.5s; }
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .video-section {
+      flex: 2;
+      min-width: 320px;
+    }
+    .video-section iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+/* Wrap prayer-notes-bible on mobile */
+@media (max-width: 768px) {
+  .prayer-notes-bible {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .prayer-notes-bible a {
+    margin: 0;
+  }
+}
+
+/* Add container to HTML if missing */
+.container {
+  max-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+    .service-section {
+      flex: 1;
+      min-width: 280px;
+      background: var(--secondary);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .service-section h3 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    #countdown {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--accent);
+      margin: 1rem 0;
+    }
+
+    .prayer-notes-bible {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+    .prayer-notes-bible a {
+      flex: 1;
+      margin: 0 0.3rem;
+      text-decoration: none;
+      color: inherit;
+    }
+    .prayer-notes-bible div {
+      background: #e9ecef;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.2s;
+      font-size: 1.5rem;
+    }
+    .prayer-notes-bible div:hover {
+      transform: translateY(-3px);
+      background: var(--accent);
+      color: #fff;
+    }
+
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    footer nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #ddd;
+    }
+    footer nav a:hover { color: #fff; }
+
+   .social-icons {
+      margin: 1.2rem 0;
+    }
+
+    .social-icons a {
+      margin: 0 8px;
+      display: inline-block;
+    }
+
+    .social-icons img {
+      width: 26px;
+      height: 26px;
+      vertical-align: middle;
+      
+    }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .hamburger { display: block; }
+      .main-content { flex-direction: column; }
+    }
+
+    /* Dark mode specifics */
+    .dark-mode header,
+    .dark-mode .service-section,
+    .dark-mode .menu-overlay {
+      background: #2a2a2a;
+      color: #fff;
+    }
+    .dark-mode nav a { color: #f1f1f1; }
+    .dark-mode footer { background: #000; }
+  body {
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Ensure content scales on mobile */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Responsive text and spacing */
+@media (max-width: 768px) {
+  h1, h2, h3, p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+}
+
+    /* override backgrounds */
+    header, .nav-bar, .header { background: linear-gradient(45deg,#003399,#800080,#cc0000) !important; color: #fff; }
+    footer, .footer { background: linear-gradient(45deg,#003399,#800080,#cc0000) !important; color: #fff; }
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Images/AFFA-LOGO.png" alt="FaithMiracle Assembly Logo" />
+      <h2>Apostolic Fire and Faith Assembly</h2>
+    </div>
+    <nav>
+      <a href="#">Connect</a>
+      <a href="#">About</a>
+      <a href="#">Small Groups</a>
+      <a href="#">Contact</a>
+      <a href="index.html">Home</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">â˜°</div>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay">
+    <header>
+      <div class="logo">
+        <img src="Images/AFFA-LOGO.png" alt="Logo" />
+        <h2>FaithMiracle Assembly</h2>
+      </div>
+      <button onclick="toggleMenu()">âœ–</button>
+    </header>
+    <hr/>
+    <nav style="display:flex;flex-direction:column;gap:1rem;margin-top:1rem;">
+      <a href="#">Connect</a>
+      <a href="about-us.html">About</a>
+      <a href="#">Small Groups</a>
+      <a href="#">Contact</a>
+      <a href="index.html">Home</a>
+    </nav>
+    <div style="margin-top:2rem;">
+      <label><input type="checkbox" id="darkToggle" onchange="toggleDarkMode()"> Dark Mode</label>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="video-section">
+      <iframe src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID" frameborder="0" allowfullscreen></iframe>
+      <p style="margin-top:0.5rem;">If the livestream doesn't load, visit our <a href="https://youtube.com" target="_blank">YouTube channel</a>.</p>
+    </div>
+    <div class="service-section">
+      <h3>Next Service</h3>
+      <label for="timezone">Timezone:</label>
+      <select id="timezone" onchange="updateServiceTimes()">
+        <option value="Africa/Lagos">GMT+1:00 Lagos</option>
+        <option value="America/New_York">New York</option>
+        <option value="Europe/London">London</option>
+      </select>
+      <div id="nextServiceContainer" style="margin-top:1rem;"></div>
+      <div id="countdown"></div>
+
+      <div class="prayer-notes-bible">
+        <a href="prayer.html"><div>ðŸ•Šï¸<br/>Prayer</div></a>
+        <a href="notes.html"><div>ðŸ“’<br/>Notes</div></a>
+        <a href="bible.html"><div>ðŸ“œ<br/>Bible</div></a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="church-name"><h3>Apostolic Fire and Faith Assembly</h3></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About Us</a>
+      <a href="give.html">Give</a>
+      <a href="get-connected.html">Contact</a>
+      <a href="get-connected.html?tab=prayer">Prayer Request</a>
+    </nav>
+    <div class="social-icons" style="margin-top:1rem;">
+      <a href="https://twitter.com" target="_blank"><img src="Images/twitter.webp" alt="Twitter"></a>
+      <a href="https://linkedin.com" target="_blank"><img src="Images/icons8-linkedin-48.png" alt="LinkedIn"></a>
+      <a href="https://facebook.com" target="_blank"><img src="Images/facebook.webp" alt="Facebook"></a>
+      <a href="https://instagram.com" target="_blank"><img src="Images/instagram.webp" alt="Instagram"></a>
+      <a href="https://youtube.com" target="_blank"><img src="Images/icons8-youtube-48.png" alt="YouTube"></a>
+    </div>
+    <div style="margin-top:1rem;font-size:0.9rem;">
+      <p>&copy; 2026 Apostolic Fire and Faith Assembly. All rights reserved.</p>
+      <p>Spreading God's love across Delta State and beyond</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menuOverlay').classList.toggle('active');
+    }
+// Close overlay when a menu link is clicked
+document.querySelectorAll('#menuOverlay nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('menuOverlay').classList.remove('active');
+  });
+});
+
+    function toggleDarkMode() {
+      const isDark = document.getElementById('darkToggle').checked;
+      document.body.classList.toggle('dark-mode', isDark);
+    }
+
+    const services = {
+      "Africa/Lagos": [
+        { day: "Sunday", times: ["8:00AM", "10:40AM"] },
+        { day: "Tuesday", times: ["11:00AM"] },
+        { day: "Thursday", times: ["5:00PM"] }
+      ],
+      "America/New_York": [
+        { day: "Sunday", times: ["8:00AM", "10:00AM"] },
+        { day: "Wednesday", times: ["7:00PM"] }
+      ],
+      "Europe/London": [
+        { day: "Sunday", times: ["9:00AM", "11:00AM"] },
+        { day: "Friday", times: ["6:00PM"] }
+      ]
+    };
+
+    let countdownTimer;
+
+    function updateServiceTimes() {
+      clearInterval(countdownTimer);
+      const tz = document.getElementById('timezone').value;
+      const container = document.getElementById('nextServiceContainer');
+      container.innerHTML = "";
+      const countdown = document.getElementById('countdown');
+      countdown.innerHTML = "";
+
+      const serviceList = services[tz] || [];
+      const now = new Date();
+      const localTime = new Date(now.toLocaleString("en-US", { timeZone: tz }));
+      const currentDay = localTime.toLocaleDateString("en-US", { weekday: "long" });
+      const currentMinutes = localTime.getHours() * 60 + localTime.getMinutes();
+
+      let nextService = null;
+
+      serviceList.forEach(service => {
+        const dayDiv = document.createElement('div');
+        dayDiv.style.padding = "0.5rem";
+        dayDiv.style.marginBottom = "0.8rem";
+        dayDiv.style.borderRadius = "6px";
+        dayDiv.style.background = "#f1f1f1";
+
+        service.times.forEach(time => {
+          const [hourStr, minuteStr] = time.replace(/AM|PM/, "").split(":");
+          let hour = parseInt(hourStr);
+          const minute = parseInt(minuteStr);
+          const isPM = time.includes("PM");
+
+          if (isPM && hour !== 12) hour += 12;
+          if (!isPM && hour === 12) hour = 0;
+
+          const serviceMinutes = hour * 60 + minute;
+
+          if (!nextService && (
+            (service.day === currentDay && serviceMinutes > currentMinutes) ||
+            (service.day !== currentDay)
+          )) {
+            nextService = { day: service.day, time: time };
+          }
+        });
+
+        dayDiv.innerHTML = `<strong>${service.day}</strong><br/>${service.times.join("<br/>")}`;
+        container.appendChild(dayDiv);
+      });
+
+      if (nextService) {
+        startCountdown(nextService, tz);
+      }
+    }
+
+    function startCountdown(nextService, tz) {
+      const countdown = document.getElementById('countdown');
+      function update() {
+        const now = new Date();
+        const localNow = new Date(now.toLocaleString("en-US", { timeZone: tz }));
+        let target = new Date(localNow);
+        const [hourStr, minuteStr] = nextService.time.replace(/AM|PM/, "").split(":");
+        let hour = parseInt(hourStr);
+        const minute = parseInt(minuteStr);
+        const isPM = nextService.time.includes("PM");
+        if (isPM && hour !== 12) hour += 12;
+        if (!isPM && hour === 12) hour = 0;
+        target.setHours(hour, minute, 0, 0);
+
+        if (target < localNow) target.setDate(target.getDate() + 7);
+
+        const diff = target - localNow;
+        if (diff <= 0) {
+          countdown.innerHTML = "Service is live now!";
+          clearInterval(countdownTimer);
+          return;
+        }
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        countdown.innerHTML = `â³ Next Service (${nextService.day} at ${nextService.time}) starts in: ${hours}h ${minutes}m ${seconds}s`;
+      }
+      update();
+      countdownTimer = setInterval(update, 1000);
+    }
+
+    window.onload = updateServiceTimes;
+  </script>
+</body>
+</html>
+
+
+

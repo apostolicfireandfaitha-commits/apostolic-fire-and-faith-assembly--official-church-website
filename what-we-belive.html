@@ -1,0 +1,911 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Optimization -->
+  <meta name="description" content="What We Believe - Apostolic Fire and Faith Assembly. Our mandate, vision, purpose, mission, task, and target in building God's kingdom.">
+  <meta name="keywords" content="Apostolic Fire and Faith Assembly, beliefs, mandate, vision, mission, purpose, covenant, core values">
+  <meta property="og:title" content="What We Believe - Apostolic Fire and Faith Assembly">
+  <meta property="og:description" content="Discover our core beliefs, mandate, vision, and mission as we build God's kingdom together.">
+  <meta property="og:image" content="Images/AFFA-LOGO.png">
+  
+  <title>What We Believe - Apostolic Fire and Faith Assembly</title>
+  <link rel="icon" href="Images/FMA-LOGO.png" type="image/png">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    /* Modern CSS Variables */
+    :root {
+      --primary-color: #003399;
+      --secondary-color: #ffffff;
+      --accent-color: #800080;
+      --dark-blue: #002266;
+      --text-dark: #000000;
+      --text-light: #333333;
+      --text-muted: #555555;
+      --background-light: #ffffff;
+      --background-white: #ffffff;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+      --shadow-xl: 0 20px 25px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.04);
+      --border-radius: 8px;
+      --border-radius-lg: 12px;
+      --border-radius-xl: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-primary: 'Inter', sans-serif;
+      --font-display: 'Playfair Display', serif;
+    }
+
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--background-light);
+      overflow-x: hidden;
+    }
+
+    /* Navigation Bar - White Background */
+    .nav-bar {
+      background: var(--background-white);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      z-index: 100;
+    }
+
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid var(--primary-color);
+    }
+
+    .church-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-color);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-dark);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Header - Smaller Height */
+    .header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Images/IMG-20250818-WA0063.jpg') center/cover;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-content {
+      text-align: center;
+      max-width: 800px;
+      padding: 2rem 1rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, white, var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Main Content */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1rem;
+    }
+
+    /* Beliefs Cards Section */
+    .beliefs-section {
+      margin-bottom: 4rem;
+    }
+
+    .beliefs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .belief-card {
+      background: var(--background-white);
+      border-radius: var(--border-radius-xl);
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .belief-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 200px;
+      background: var(--background-light);
+      border-radius: var(--border-radius-lg);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 3rem;
+    }
+
+    .card-heading {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .card-description {
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* Covenant Section */
+    .covenant-section {
+      background: var(--background-white);
+      border-radius: var(--border-radius-xl);
+      padding: 4rem 2rem;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .covenant-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--text-dark);
+      margin-bottom: 3rem;
+    }
+
+    .covenant-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .covenant-item {
+      background: var(--background-light);
+      padding: 2rem;
+      border-radius: var(--border-radius-lg);
+      transition: var(--transition);
+    }
+
+    .covenant-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .covenant-item h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    .scripture {
+      color: var(--text-light);
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+
+    /* Core Values Section */
+    .core-values-section {
+      background: var(--background-white);
+      border-radius: var(--border-radius-xl);
+      padding: 4rem 2rem;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--text-dark);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .value-card {
+      background: var(--background-light);
+      padding: 1.5rem;
+      border-radius: var(--border-radius-lg);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .value-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .value-icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .value-card:hover .value-icon {
+      color: white;
+    }
+
+    .value-name {
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+@media (max-width: 768px) {
+  .core-values-section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .value-card {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .value-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+    /* Footer */
+    .footer {
+      background: var(--dark-blue);
+      color: white;
+      padding: 3rem 1rem 1rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-logo {
+      margin-bottom: 2rem;
+    }
+
+    .join-online-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--secondary-color);
+      color: var(--text-dark);
+      padding: 1rem 2rem;
+      border-radius: var(--border-radius-lg);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      margin-bottom: 2rem;
+    }
+
+    .join-online-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-nav a:hover {
+      color: var(--secondary-color);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-icon:hover {
+      background: var(--secondary-color);
+      color: var(--text-dark);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1rem;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+     @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        background: var(--background-white);
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-md);
+        z-index: 1000;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .beliefs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .covenant-items {
+        grid-template-columns: 1fr;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+/* Hide default dropdown on mobile, only use overlay */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+}
+
+/* Fullscreen Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(1, 20, 31, 0.97);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 2000;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Overlay Header */
+.menu-overlay header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #fff;
+}
+
+.menu-overlay header img {
+  height: 40px;
+}
+
+.menu-overlay header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.menu-overlay header button {
+  position: absolute;
+  top: 10px;
+  right: -35px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Overlay Nav Links */
+.menu-overlay nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.menu-overlay nav a {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.menu-overlay.active nav a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-overlay.active nav a:nth-child(1) { transition-delay: 0.1s; }
+.menu-overlay.active nav a:nth-child(2) { transition-delay: 0.2s; }
+.menu-overlay.active nav a:nth-child(3) { transition-delay: 0.3s; }
+.menu-overlay.active nav a:nth-child(4) { transition-delay: 0.4s; }
+.menu-overlay.active nav a:nth-child(5) { transition-delay: 0.5s; }
+.menu-overlay.active nav a:nth-child(6) { transition-delay: 0.6s; }
+
+    /* Animation Classes */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .fade-in.delay-1 { animation-delay: 0.1s; }
+    .fade-in.delay-2 { animation-delay: 0.2s; }
+    .fade-in.delay-3 { animation-delay: 0.3s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+      /* override backgrounds */
+    header, .nav-bar, .header { background: linear-gradient(45deg,#003399,#800080,#cc0000) !important; color: #fff; }
+    footer, .footer { background: linear-gradient(45deg,#003399,#800080,#cc0000) !important; color: #fff; }
+
+</style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <div class="nav-content">
+      <div class="logo-section">
+        <img src="Images/AFFA-LOGO.png" alt="Apostolic Fire and Faith Assembly Logo" class="logo">
+        <div class="church-name">Apostolic Fire and Faith Assembly</div>
+      </div>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="livestream.html">Livestream</a></li>
+        <li><a href="give.html">Give</a></li>
+        <li><a href="expression.html">Locations</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+      </ul>
+      
+      <button class="mobile-menu-btn" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</button>
+
+    </div>
+  </nav>
+<!-- Fullscreen Mobile Menu Overlay -->
+<div class="menu-overlay" id="menuOverlay">
+  <header>
+    <img src="Images/AFFA-LOGO.png" alt="Apostolic Fire and Faith Assembly Logo">
+    <h2>Apostolic Fire and Faith Assembly</h2>
+    <button onclick="toggleMenu()">âœ–</button>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="livestream.html">Livestream</a>
+    <a href="give.html">Give</a>
+    <a href="expression.html">Locations</a>
+    <a href="#">Media</a>
+    <a href="about-us.html">About Us</a>
+  </nav>
+</div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <h1 class="hero-title fade-in">What We Believe</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Beliefs Cards Section -->
+    <section class="beliefs-section">
+      <div class="beliefs-grid">
+        <!-- Our Mandate Card -->
+        <div class="belief-card fade-in">
+          <h3 class="card-title">Our Mandate</h3>
+          <div class="card-image">
+            <i class="fas fa-scroll"></i>
+          </div>
+          <h4 class="card-heading">Building God's Kingdom</h4>
+          <p class="card-description">
+            We are mandated to build God's kingdom on earth by making disciples of all nations, teaching them to observe all that Christ has commanded us. Our mandate is rooted in the Great Commission, empowering believers to live purposeful lives that glorify God.
+          </p>
+        </div>
+
+        <!-- Our Vision Card -->
+        <div class="belief-card fade-in delay-1">
+          <h3 class="card-title">Our Vision</h3>
+          <div class="card-image">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h4 class="card-heading">One Church in Many Locations</h4>
+          <p class="card-description">
+            To establish a global network of churches that transcend geographical boundaries, creating a unified body of believers who impact their communities with the love and power of Christ. We envision churches in every nation, reaching every people group.
+          </p>
+        </div>
+
+        <!-- Our Purpose Card -->
+        <div class="belief-card fade-in delay-2">
+          <h3 class="card-title">Our Purpose</h3>
+          <div class="card-image">
+            <i class="fas fa-compass"></i>
+          </div>
+          <h4 class="card-heading">Restoring Destinies</h4>
+          <p class="card-description">
+            Our purpose is to restore men back to their God-given destiny, helping them discover their identity in Christ and fulfill their divine calling. We exist to see lives transformed, families restored, and communities impacted by the Gospel.
+          </p>
+        </div>
+
+        <!-- Our Mission Card -->
+        <div class="belief-card fade-in">
+          <h3 class="card-title">Our Mission</h3>
+          <div class="card-image">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h4 class="card-heading">Making Disciples</h4>
+          <p class="card-description">
+            To make disciples for Christ by preaching the Gospel, teaching biblical principles, and equipping believers for ministry. We are committed to building a culture of evangelism that reaches every season and mobilizes people to spread the Good News.
+          </p>
+        </div>
+
+        <!-- Task Card -->
+        <div class="belief-card fade-in delay-1">
+          <h3 class="card-title">Task</h3>
+          <div class="card-image">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <h4 class="card-heading">Equipping the Saints</h4>
+          <p class="card-description">
+            Our task is to equip the saints for the work of ministry, building up the body of Christ until we all reach unity in faith and knowledge of the Son of God. We focus on developing mature believers who can lead and serve effectively.
+          </p>
+        </div>
+
+        <!-- Target Card -->
+        <div class="belief-card fade-in delay-2">
+          <h3 class="card-title">Target</h3>
+          <div class="card-image">
+            <i class="fas fa-crosshairs"></i>
+          </div>
+          <h4 class="card-heading">Global Impact</h4>
+          <p class="card-description">
+            Our target is to impact every nation, tribe, and tongue with the Gospel of Jesus Christ. We aim to establish thriving churches in Nigeria, the UK, USA, Canada, Belgium, and beyond, creating a global movement of faith and transformation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- God's Covenant Section -->
+    <section class="covenant-section fade-in">
+      <h2 class="covenant-title">God's Covenant Over This Commission</h2>
+      <div class="covenant-items">
+        <div class="covenant-item">
+          <h3>Long Life</h3>
+          <p class="scripture">Psalm 118:17 - "I shall not die, but live, and declare the works of the Lord."</p>
+          <p class="scripture">Psalm 91:16 - "With long life will I satisfy him, and show him my salvation."</p>
+        </div>
+        <div class="covenant-item">
+          <h3>Prosperity</h3>
+          <p class="scripture">3 John 2 - "Beloved, I wish above all things that thou mayest prosper and be in health, even as thy soul prospereth."</p>
+        </div>
+        <div class="covenant-item">
+          <h3>Good Health</h3>
+          <p class="scripture">Exodus 23:25 - "And ye shall serve the Lord your God, and he shall bless thy bread, and thy water; and I will take sickness away from the midst of thee."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="core-values-section fade-in">
+      <h2 class="section-title">Core Values</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <div class="value-name">Accountability</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-fist-raised"></i>
+          </div>
+          <div class="value-name">Discipline</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-cross"></i>
+          </div>
+          <div class="value-name">Faith in God</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="value-name">Righteousness</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="value-name">Love</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <div class="value-name">Service</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-praying-hands"></i>
+          </div>
+          <div class="value-name">Humility</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <div class="value-name">Integrity</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="value-name">Excellence</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-crown"></i>
+          </div>
+          <div class="value-name">Leadership by Example</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="logo-section">
+          <img src="Images/AFFA-LOGO.png" alt="Apostolic Fire and Faith Assembly Logo" class="logo">
+          <div class="church-name">Apostolic Fire and Faith Assembly</div>
+        </div>
+      </div>
+
+      <a href="#" target="_blank" class="join-online-btn">
+        <i class="fas fa-play"></i>
+        Join Us Online
+      </a>
+
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="livestream.html">Livestream</a>
+        <a href="give.html">Give</a>
+        <a href="expression.html">Locations</a>
+        <a href="get-connected.html">Contact</a>
+        <a href="get-connected.html?tab=prayer">Prayer Request</a>
+      </nav>
+
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" class="social-icon">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Apostolic Fire and Faith Assembly. All rights reserved.</p>
+        <p>We Celebrate You, Your Testimony Is Sure</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    // Toggle fullscreen overlay
+function toggleMenu() {
+  document.getElementById('menuOverlay').classList.toggle('active');
+}
+
+// Close overlay when clicking a link
+document.querySelectorAll('#menuOverlay nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('menuOverlay').classList.remove('active');
+  });
+});
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all fade-in elements
+    document.addEventListener('DOMContentLoaded', () => {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      fadeElements.forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+    console.log('ðŸ™ Apostolic Fire and Faith Assembly - What We Believe page loaded successfully!');
+  </script>
+</body>
+</html>
+
